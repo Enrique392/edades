@@ -4,7 +4,7 @@
     justify-content: center;
     background-color: #26006e;
     padding: 50px;
-    height: 400px;
+    height: 200px;
     flex-direction:column;
 
 }
@@ -14,7 +14,7 @@
     justify-content: space-between;
     background-color: #26006e;
     padding: 50px;
-    height: 400px;
+    height: 200px;
     color: white;
 }
 
@@ -71,7 +71,7 @@ a:hover{
 }
 
 button{
-    padding: 10px 20px;
+
     background-color: #caf0f8;
     color: #000000;
     border-radius:5px;
@@ -104,15 +104,18 @@ img:hover{
 
 
 
-.maquina{
+.maquina, .boton, .salir{
     visibility: hidden;
 }
 
 .maquina-respuesta{
     display: block;
-    border-left:2px solid #4e2e87 ;
 
 
+}
+
+.letra-blanca{
+    color: white;
 }
 
 

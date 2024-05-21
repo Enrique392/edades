@@ -12,29 +12,38 @@
     <title>Document</title>
 </head>
 <body>
-<div class="contenedor1">
-    <label for="piedra">
-        <input type="radio" value="1" name="opcion" id="piedra">
-        <img src="views/imagenes/piedra.png" alt="Piedra" class="col-6">
-    </label>
+<div class="contenedor centrado">
+    <div class="contenedor1 centrado">
+        <label for="piedra">
+            <input type="radio" value="1" name="opcion" id="piedra">
+            <img src="views/imagenes/piedra.png" alt="Piedra" class="col-4">
+        </label>
 
-    <label for="papel">
-        <input type="radio" value="2" name="opcion" id="papel">
-        <img src="views/imagenes/papel.png" alt="Papel" class="col-6">
-    </label>
+        <label for="papel">
+            <input type="radio" value="2" name="opcion" id="papel">
+            <img src="views/imagenes/papel.png" alt="Papel" class="col-4 ">
+        </label>
 
-    <label for="tijeras">
-        <input type="radio" value="3" name="opcion" id="tijeras">
-        <img src="views/imagenes/tijeras.png" alt="Tijeras" class="col-6">
-    </label>
-    <div class="maquina">
-        <img src="" alt="respuesta maquina" id="respuestaMaquina" class="col-6">
+        <label for="tijeras">
+            <input type="radio" value="3" name="opcion" id="tijeras">
+            <img src="views/imagenes/tijeras.png" alt="Tijeras" class="col-4">
+        </label>
     </div>
-    <div class="cajaFlex">
+
+    <div class="contenedor letra-blanca">
         <p class="centrado" id="mensaje"></p>
         <p class="centrado" id="contador"></p>
-
     </div>
+
+    <div class="maquina">
+        <img src="" alt="respuesta maquina" id="respuestaMaquina" class="col-4">
+    </div>
+
+    <div class="contenedor1 centrado">
+        <button class="boton">Iniciar nueva partida</button>
+        <button class="salir">Salir del juego</button>
+    </div>
+
 </div>
 
 </body>

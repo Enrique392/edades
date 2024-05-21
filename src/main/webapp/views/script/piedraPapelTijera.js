@@ -64,6 +64,16 @@ window.onload=function (){
             }
             if (contadorUsuario==10){
                 ganador();
+                let boton=document.querySelector(".boton");
+                let salir=document.querySelector(".salir")
+                boton.style.visibility="visible"
+                salir.style.visibility="visible"
+                boton.addEventListener("click",function (){
+                    window.location.replace("index.jsp");
+                })
+                salir.addEventListener("click",function (){
+                    window.close();
+                })
             }
 
         })
