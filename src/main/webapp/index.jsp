@@ -13,21 +13,27 @@
 </head>
 <body>
 <div class="contenedor centrado">
-    <div class="contenedor1 centrado">
-        <label for="piedra">
-            <input type="radio" value="1" name="opcion" id="piedra">
-            <img src="views/imagenes/piedra.png" alt="Piedra" class="col-4">
-        </label>
+    <div class="contenedor1 centrado cards">
+        <div class="card">
+            <label for="piedra">
+                <input type="radio" value="1" name="opcion" id="piedra">
+                <img src="views/imagenes/piedra.png" alt="Piedra" class="col-4">
+            </label>
+        </div>
 
-        <label for="papel">
-            <input type="radio" value="2" name="opcion" id="papel">
-            <img src="views/imagenes/papel.png" alt="Papel" class="col-4 ">
-        </label>
+        <div class="card" >
+            <label for="papel">
+                <input type="radio" value="2" name="opcion" id="papel">
+                <img src="views/imagenes/papel.png" alt="Papel" class="col-4 ">
+            </label>
+        </div>
 
-        <label for="tijeras">
-            <input type="radio" value="3" name="opcion" id="tijeras">
-            <img src="views/imagenes/tijeras.png" alt="Tijeras" class="col-4">
-        </label>
+        <div class="card">
+            <label for="tijeras">
+                <input type="radio" value="3" name="opcion" id="tijeras">
+                <img src="views/imagenes/tijeras.png" alt="Tijeras" class="col-4">
+            </label>
+        </div>
     </div>
 
     <div class="contenedor letra-blanca">
@@ -35,9 +41,16 @@
         <p class="centrado" id="contador"></p>
     </div>
 
+<div class="centrado">
     <div class="maquina">
         <img src="" alt="respuesta maquina" id="respuestaMaquina" class="col-4">
     </div>
+
+    <div class="maquina2">
+        <video class="centrado" height="150px" width="150px" src="" autoplay loop id="respuestaMaquina2"></video>
+    </div>
+</div>
+
 
     <div class="contenedor1 centrado">
         <button class="boton">Iniciar nueva partida</button>

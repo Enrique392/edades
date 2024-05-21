@@ -2,11 +2,14 @@
 window.onload=function (){
 
     let bloque=document.querySelector(".maquina")
+    let bloqueVideo=document.querySelector(".maquina2")
     let img=document.querySelector("#respuestaMaquina")
+    let vid=document.querySelector("#respuestaMaquina2")
     let user=document.querySelectorAll('input[type=radio][name="opcion"]');
     let contadorMaquina=0;
     let contadorUsuario=0;
     let empate=0;
+    let card=document.querySelectorAll(".card");
 
     user.forEach(function (userOption){
         userOption.addEventListener("click",function (){
@@ -62,8 +65,8 @@ window.onload=function (){
                 document.querySelector("#mensaje").innerHTML=msg
                 document.querySelector("#contador").innerHTML=`Usuario: ${contadorUsuario}  Maquina: ${contadorMaquina} Empate: ${empate}`
             }
-            if (contadorUsuario==10){
-                ganador();
+            if (contadorUsuario==10 || contadorMaquina==3){
+
                 let boton=document.querySelector(".boton");
                 let salir=document.querySelector(".salir")
                 boton.style.visibility="visible"
@@ -74,7 +77,32 @@ window.onload=function (){
                 salir.addEventListener("click",function (){
                     window.close();
                 })
+
+                user.forEach(function (userOption){
+                    userOption.disabled=true
+                })
+
+                card.forEach(function (card){
+                    card.style.transform="scale(1.0)";
+                    card.style.filter="grayscale(100%)";
+                    card.addEventListener("mouseover",function (){
+                        card.style.cursor="none";
+                    })
+
+                })
+
+                if (contadorUsuario==10){
+                    ganador();
+                }else{
+                    bloqueVideo.style.visibility="visible"
+                    vid.src="views/imagenes/videoMapache2.mp4"
+                    bloque.classList.remove("maquina-respuesta")
+                    bloque.style.visibility="hidden"
+                }
             }
+
+
+
 
         })
 
